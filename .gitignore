@@ -132,6 +132,8 @@ dist
 !.yarn/plugins
 !.yarn/releases
 !.yarn/sdks
+
+.vscode/
 !.yarn/versions
 
 # Vite logs files
