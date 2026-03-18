@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Primeira Igreja Reformada</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.main-nav');
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        });
+    </script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#inicio" class="logo">
+                <img src="Logo.png" alt="Logo Primeira Igreja Reformada">
+            </a>
+            
+            <button class="hamburger" aria-label="Abrir menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+    
+            <nav class="main-nav" id="mobile-menu">
+                <ul>
+                    <li><a href="#cultos">Cultos</a></li>
+                    <li><a href="#palavra-pastoral">Palavra Pastoral</a></li>
+                    <li><a href="#avisos">Avisos</a></li>
+                    <li><a href="#aniversariantes">Aniversariantes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="cultos" class="cultos">
+            <h2>Cultos</h2>
+            <p><strong>Segunda-Feira</strong><br>Culto de Oração - 20:00</p>
+            
+            <h3>Pregação</h3>
+            <p>
+                Dia x - Pregador<br>
+                Dia X - Pregador
+            <br>Dia X - Pregador
+            <br>Dia X - Pregador
+            </p>
+
+            <p><strong>Quarta-Feira</strong><br>Culto de Doutrina - 19:00 </p>
+            <h3>Pregação</h3>
+            <p>
+                Dia x - Pregador<br>
+                Dia X - Pregador
+            <br>Dia X - Pregador
+            <br>Dia X - Pregador
+            </p>
+            <p><strong>Domingo</strong><br>
+                Consagração - 07:00 às 08:00<br>
+                E.B.D - 09:00 (Catecismo de Heidelberg)<br>
+                Culto Público - 18:00
+            </p>
+
+            <h2>E.B.D Infantil</h2>
+            <p>Tia Vania e Tia Marcela</p>
+            <img src="ebd1.jpg" alt="Crianças na EBD">
+        </section>
+
+        <section id="palavra-pastoral" class="palavra-pastoral">
+            <h2>Palavra Pastoral</h2>
+            <p>A mensagem pastoral da semana será inserida aqui.</p>
+        </section>
+
+        <section id="avisos" class="avisos">
+            <h2>Avisos</h2>
+            <p>Fique por dentro das atividades da nossa comunidade.</p>
+            
+            <h3>Dízimos e Ofertas</h3>
+            <blockquote>
+                "Cada um contribua segundo propôs no seu coração; não com tristeza, ou por necessidade; porque Deus ama ao que dá com alegria." <br>
+                <strong>2 Coríntios 9:7</strong>
+            </blockquote>
+            <a href="seu-link-do-pix" class="gift-button">Doar via PIX</a>
+
+            <h3>Aconselhamento Bíblico</h3>
+            <p>Sextas-feiras, das 19:00 às 21:00<br> 
+               Agendar com Pastor Leandro Campos: <br>
+               <a href="https://wa.me/5511951459787">(11) 95145-9787</a>
+            </p>
+        </section>
+
+        <section id="aniversariantes" class="aniversariantes">
+            <h2>Aniversariantes do Mês</h2>
+            <p>Lista de aniversariantes aqui. Parabéns!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>Primeira Igreja Reformada do Capão Redondo</strong><br>
+        Endereço: Rua Dr. Cardoso de Mello Filho, 02 - CEP: 05875-260<br>
+        Instagram: <a href="https://www.instagram.com/igrejareformadacapaoredondo/">@igrejareformadadacapaoredondo</a><br>
+        E-mail: <a href="mailto:pircr2024@gmail.com">pircr2024@gmail.com</a><br>
+        Pastor Titular: Leandro Campos - <a href="tel:11951459787">(11) 95145-9787</a><br>
+        &copy; 2026 João Paulo - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
