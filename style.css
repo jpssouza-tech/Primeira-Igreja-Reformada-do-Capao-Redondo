@@ -31,7 +31,32 @@ section {
     padding: 0;
     box-sizing: border-box;
 }
+/* Container que segura os cultos */
+.cultos-grid {
+    display: flex;
+    justify-content: space-between; /* Espaça eles igualmente */
+    gap: 20px; /* Espaço entre os cards */
+    flex-wrap: wrap; /* Se não couber (no celular), ele joga para baixo */
+    margin-top: 30px;
+}
 
+/* Estilo de cada "card" de culto */
+.culto-card {
+    flex: 1; /* Faz todos terem a mesma largura */
+    min-width: 250px; /* Não deixa ficarem esmagados no mobile */
+    padding: 20px;
+    background-color: #f9f5f3; /* Aquele bege clarinho que combina com o marrom */
+    border-top: 4px solid #5d4037; /* Detalhe em marrom no topo */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.culto-card h3 {
+    margin-bottom: 15px;
+    color: #5d4037;
+    border-left: none; /* Removemos a borda lateral aqui para centralizar */
+    padding-left: 0;
+}
 body {
     font-family: 'Georgia', serif; /* Fonte clássica e legível */
     line-height: 1.6;
