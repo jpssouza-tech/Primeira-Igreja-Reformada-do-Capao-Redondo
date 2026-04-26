@@ -224,10 +224,15 @@ img {
 footer {
     background-color: #1a1a1a;
     color: #ffffff;
-    text-align: center;
-    padding: 40px 20px;
+    padding: 20px;
     margin-top: 60px;
     font-size: 0.9rem;
+    display: flex;
+    flex-direction: column; /* Coloca os itens um embaixo do outro */
+    align-items: center;    /* Centraliza na horizontal */
+    justify-content: center; /* Centraliza na vertical */
+    text-align: center;
+
 }
 
 footer a {
@@ -237,4 +242,13 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+.social img {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 15px;
+    height: 40px; 
+    border: none;
+    outline: none !important; /* Remove o contorno de foco (aquela linha azul/branca ao clicar) */
+    text-decoration: none !important; /* Garante que não tenha sublinhado no texto */        
 }
