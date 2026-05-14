@@ -266,5 +266,4 @@ footer a:hover {
     height: 40px; 
     border: none;
     outline: none !important; /* Remove o contorno de foco (aquela linha azul/branca ao clicar) */
-    text-decoration: none !important; /* Garante que não tenha sublinhado no texto */        
-}
+    text-decoration: none !important; 
