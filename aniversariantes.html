@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primeira Igreja Reformada</title>
+    <title>Aniversariantes | Primeira Igreja Reformada</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -41,41 +41,35 @@
     </header>
 
     <main>
-        <section id="apresentacao" class="apresentacao hidden">
-            <div class="video-wrapper">
-                <!-- Substitua o src abaixo pelo vídeo real de apresentação da igreja -->
-                <video class="video-apresentacao" controls poster="img/video-poster.jpg">
-                    <source src="img/video-apresentacao.mp4" type="video/mp4">
-                    Seu navegador não suporta vídeo incorporado.
-                </video>
-            </div>
-            <div class="apresentacao-texto">
-                <h1>Bem-vindo à Primeira Igreja Reformada do Capão Redondo</h1>
-                <p>Assista ao vídeo acima e conheça um pouco da nossa comunidade de fé.</p>
-                <a href="nossa-visao.html" class="btn-primary">Conheça Nossa Visão</a>
+        <section id="aniversariantes" class="aniversariantes hidden">
+            <h2>Aniversariantes do Mês</h2>
+            <div class="cultos-grid">
+                <div class="culto-card birthday-card">
+                    <img src="img/aniversariante-exemplo.jpg" alt="Foto do aniversariante" class="birthday-foto">
+                    <h3>Nome do Irmão(ã)</h3>
+                    <p>Data: 00/00</p>
+                </div>
+                <div class="culto-card birthday-card">
+                    <img src="img/aniversariante-exemplo.jpg" alt="Foto do aniversariante" class="birthday-foto">
+                    <h3>Nome do Irmão(ã)</h3>
+                    <p>Data: 00/00</p>
+                </div>
+                <div class="culto-card birthday-card">
+                    <img src="img/aniversariante-exemplo.jpg" alt="Foto do aniversariante" class="birthday-foto">
+                    <h3>Nome do Irmão(ã)</h3>
+                    <p>Data: 00/00</p>
+                </div>
             </div>
         </section>
 
-        <section id="eventos" class="eventos hidden">
-            <h2>Eventos e Avisos</h2>
+        <section id="aniversario-casamento" class="aniversario-casamento hidden">
+            <h2>Aniversário de Casamento</h2>
             <div class="cultos-grid">
-                <a href="#" class="culto-card event-card">
-                    <h3>Campanha do KG</h3>
-                    <p>Você já fez sua contribuição? Sua colaboração irá abençoar grandemente algumas famílias necessitadas.</p>
-                </a>
-                <a href="ensino.html" class="culto-card event-card">
-                    <h3>Escola Bíblica Dominical</h3>
-                    <p>Turmas para todas as idades, aos domingos às 09:00. Clique para saber mais.</p>
-                </a>
-                <a href="midia.html" class="culto-card event-card">
-                    <h3>Acompanhe pela Mídia</h3>
-                    <p>Cultos, louvores e mensagens também estão disponíveis online.</p>
-                </a>
-                <a href="aniversariantes.html" class="culto-card event-card birthday-card-link">
-                    <h3>Aniversariantes do Mês</h3>
-                    <p>Veja quem está de aniversário e comemore com a nossa família na fé.</p>
-                    <span class="btn-primary btn-small">Ver Aniversariantes</span>
-                </a>
+                <div class="culto-card birthday-card">
+                    <img src="img/casal-exemplo.jpg" alt="Foto do casal" class="birthday-foto">
+                    <h3>Nome do Casal</h3>
+                    <p>Data: 00/00 &mdash; 00 anos de casados</p>
+                </div>
             </div>
         </section>
     </main>

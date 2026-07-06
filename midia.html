@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primeira Igreja Reformada</title>
+    <title>Mídia | Primeira Igreja Reformada</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -32,7 +32,7 @@
                     <li><a href="cultos.html">Cultos</a></li>
                     <li><a href="ensino.html">Ensino</a></li>
                     <li><a href="dizimos-e-ofertas.html">Dízimos e Ofertas</a></li>
-                    <li><a href="midia.html">Mídia</a></li>
+                    <li><a href="midia.html" class="active-link">Mídia</a></li>
                     <li><a href="artigos.html">Artigos</a></li>
                     <li><a href="login.html">Login</a></li>
                 </ul>
@@ -41,40 +41,32 @@
     </header>
 
     <main>
-        <section id="apresentacao" class="apresentacao hidden">
-            <div class="video-wrapper">
-                <!-- Substitua o src abaixo pelo vídeo real de apresentação da igreja -->
-                <video class="video-apresentacao" controls poster="img/video-poster.jpg">
-                    <source src="img/video-apresentacao.mp4" type="video/mp4">
-                    Seu navegador não suporta vídeo incorporado.
-                </video>
-            </div>
-            <div class="apresentacao-texto">
-                <h1>Bem-vindo à Primeira Igreja Reformada do Capão Redondo</h1>
-                <p>Assista ao vídeo acima e conheça um pouco da nossa comunidade de fé.</p>
-                <a href="nossa-visao.html" class="btn-primary">Conheça Nossa Visão</a>
-            </div>
+        <section class="page-hero hidden">
+            <img src="img/hero-midia.jpg" alt="Mídia" class="hero-img">
         </section>
 
-        <section id="eventos" class="eventos hidden">
-            <h2>Eventos e Avisos</h2>
+        <section id="midia" class="midia hidden">
+            <h2>Mídia</h2>
             <div class="cultos-grid">
-                <a href="#" class="culto-card event-card">
-                    <h3>Campanha do KG</h3>
-                    <p>Você já fez sua contribuição? Sua colaboração irá abençoar grandemente algumas famílias necessitadas.</p>
+                <a href="https://www.instagram.com/igrejareformadacapaoredondo/" class="culto-card midia-card">
+                    <img src="img/logotipo-do-instagram.png" alt="Instagram" class="midia-icone">
+                    <h3>Instagram</h3>
+                    <p>Acompanhe o dia a dia da nossa igreja.</p>
                 </a>
-                <a href="ensino.html" class="culto-card event-card">
-                    <h3>Escola Bíblica Dominical</h3>
-                    <p>Turmas para todas as idades, aos domingos às 09:00. Clique para saber mais.</p>
+                <a href="https://youtube.com/@pircr?si=NlShT42MR3PIOiRj" class="culto-card midia-card">
+                    <img src="img/youtube.png" alt="YouTube" class="midia-icone">
+                    <h3>YouTube</h3>
+                    <p>Assista aos cultos e mensagens completas.</p>
                 </a>
-                <a href="midia.html" class="culto-card event-card">
-                    <h3>Acompanhe pela Mídia</h3>
-                    <p>Cultos, louvores e mensagens também estão disponíveis online.</p>
+                <a href="https://wa.me/5511951459787" class="culto-card midia-card">
+                    <img src="img/whatsapp.preto.png" alt="WhatsApp" class="midia-icone">
+                    <h3>WhatsApp</h3>
+                    <p>Fale diretamente com a nossa liderança.</p>
                 </a>
-                <a href="aniversariantes.html" class="culto-card event-card birthday-card-link">
-                    <h3>Aniversariantes do Mês</h3>
-                    <p>Veja quem está de aniversário e comemore com a nossa família na fé.</p>
-                    <span class="btn-primary btn-small">Ver Aniversariantes</span>
+                <a href="louvores.html" class="culto-card midia-card">
+                    <h3>Louvores</h3>
+                    <p>Ouça nossa playlist de louvores.</p>
+                    <span class="btn-primary btn-small">Ouvir Louvores</span>
                 </a>
             </div>
         </section>

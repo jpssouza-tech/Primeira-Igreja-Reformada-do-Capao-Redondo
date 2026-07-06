@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primeira Igreja Reformada</title>
+    <title>Nossa Visão | Primeira Igreja Reformada</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,7 +28,7 @@
                 <ul>
                     <li><a href="palavra-pastoral.html">Palavra Pastoral</a></li>
                     <li><a href="catecismo.html">Catecismo de Heidelberg</a></li>
-                    <li><a href="nossa-visao.html">Nossa Visão</a></li>
+                    <li><a href="nossa-visao.html" class="active-link">Nossa Visão</a></li>
                     <li><a href="cultos.html">Cultos</a></li>
                     <li><a href="ensino.html">Ensino</a></li>
                     <li><a href="dizimos-e-ofertas.html">Dízimos e Ofertas</a></li>
@@ -41,42 +41,71 @@
     </header>
 
     <main>
-        <section id="apresentacao" class="apresentacao hidden">
-            <div class="video-wrapper">
-                <!-- Substitua o src abaixo pelo vídeo real de apresentação da igreja -->
-                <video class="video-apresentacao" controls poster="img/video-poster.jpg">
-                    <source src="img/video-apresentacao.mp4" type="video/mp4">
-                    Seu navegador não suporta vídeo incorporado.
-                </video>
-            </div>
-            <div class="apresentacao-texto">
-                <h1>Bem-vindo à Primeira Igreja Reformada do Capão Redondo</h1>
-                <p>Assista ao vídeo acima e conheça um pouco da nossa comunidade de fé.</p>
-                <a href="nossa-visao.html" class="btn-primary">Conheça Nossa Visão</a>
+        <section class="page-hero hidden">
+            <img src="img/hero-nossa-visao.jpg" alt="Nossa Visão" class="hero-img">
+        </section>
+
+        <section class="verse-section hidden">
+            <blockquote class="verse-box">
+                <!-- Espaço reservado para o versículo bíblico -->
+                "Insira aqui o versículo bíblico referente à visão da igreja."<br>
+                <strong>Referência</strong>
+            </blockquote>
+        </section>
+
+        <section id="caracteristicas" class="caracteristicas hidden">
+            <h2>Nossa Visão</h2>
+            <div class="cultos-grid">
+                <div class="culto-card">
+                    <h3>01. Confessional</h3>
+                    <p>Cremos e ensinamos de acordo com as confissões históricas da fé reformada.</p>
+                </div>
+                <div class="culto-card">
+                    <h3>02. Centrada em Deus</h3>
+                    <p>Nosso culto é reverente e voltado inteiramente à glória de Deus.</p>
+                </div>
+                <div class="culto-card">
+                    <h3>03. Cristocêntrica</h3>
+                    <p>Cristo é o centro da nossa pregação, do nosso louvor e da nossa vida.</p>
+                </div>
+                <div class="culto-card">
+                    <h3>04. Comunidade</h3>
+                    <p>Vivemos a fé em comunhão, cuidando uns dos outros como família.</p>
+                </div>
+                <div class="culto-card">
+                    <h3>05. Missão</h3>
+                    <p>Buscamos viver e anunciar o evangelho ao Capão Redondo e além.</p>
+                </div>
             </div>
         </section>
 
-        <section id="eventos" class="eventos hidden">
-            <h2>Eventos e Avisos</h2>
+        <section id="lideranca" class="lideranca hidden">
+            <h2>Conheça Nossa Liderança</h2>
             <div class="cultos-grid">
-                <a href="#" class="culto-card event-card">
-                    <h3>Campanha do KG</h3>
-                    <p>Você já fez sua contribuição? Sua colaboração irá abençoar grandemente algumas famílias necessitadas.</p>
-                </a>
-                <a href="ensino.html" class="culto-card event-card">
-                    <h3>Escola Bíblica Dominical</h3>
-                    <p>Turmas para todas as idades, aos domingos às 09:00. Clique para saber mais.</p>
-                </a>
-                <a href="midia.html" class="culto-card event-card">
-                    <h3>Acompanhe pela Mídia</h3>
-                    <p>Cultos, louvores e mensagens também estão disponíveis online.</p>
-                </a>
-                <a href="aniversariantes.html" class="culto-card event-card birthday-card-link">
-                    <h3>Aniversariantes do Mês</h3>
-                    <p>Veja quem está de aniversário e comemore com a nossa família na fé.</p>
-                    <span class="btn-primary btn-small">Ver Aniversariantes</span>
-                </a>
+                <div class="culto-card lideranca-card">
+                    <img src="img/pastor-leandro.jpg" alt="Pr. Leandro" class="lideranca-foto">
+                    <h3>Pr. Leandro</h3>
+                    <p>Pastor</p>
+                </div>
+                <div class="culto-card lideranca-card">
+                    <img src="img/pastor-josafa.jpg" alt="Pr. Josafá" class="lideranca-foto">
+                    <h3>Pr. Josafá</h3>
+                    <p>Pastor</p>
+                </div>
             </div>
+        </section>
+
+        <section id="torne-se-membro" class="torne-se-membro hidden">
+            <h2>Torne-se Membro</h2>
+            <p>Fazer parte da nossa igreja é caminhar em comunhão, crescer na fé e servir ao lado de uma família espiritual.</p>
+            <h3>Como se tornar membro</h3>
+            <ol class="passos-membro">
+                <li>Participe das aulas de doutrina.</li>
+                <li>Converse com um dos nossos pastores.</li>
+                <li>Faça a profissão de fé perante o Conselho.</li>
+                <li>Seja recebido em membresia durante o culto.</li>
+            </ol>
+            <a href="https://wa.me/5511951459787" class="btn-primary">Falar com um Pastor</a>
         </section>
     </main>
     <footer class="main-footer">

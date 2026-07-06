@@ -3,7 +3,9 @@
    Preto: #1a1a1a (Solenidade)
    Branco: #ffffff (Clareza)
    Marrom: #5d4037 (Tradição/Madeira)
+   Bege:   #f9f5f3 (Fundo dos cards)
    ========================================= */
+
 /* Isso deixa invisível no começo */
 .hidden {
     opacity: 0;
@@ -11,61 +13,83 @@
     transition: all 1s ease-out;
 }
 
-/* ISSO AQUI É O QUE FAZ APARECER (Confira se essa classe existe!) */
+/* ISSO AQUI É O QUE FAZ APARECER */
 .show {
     opacity: 1 !important;
     transform: translateY(0) !important;
 }
+
 /* 1. Deixa o deslize elegante (suave) */
 html {
     scroll-behavior: smooth;
 }
-marquee.texto_rotativo
- {
+
+marquee.texto_rotativo {
     color: rgb(0, 0, 0);
     font-size: 25px;
-    font-family:'Georgia', serif;
- }
- .rotativo_texto {
-    background:#D28D53;
+    font-family: 'Georgia', serif;
+}
+
+.rotativo_texto {
+    background: #D28D53;
     padding: 10px 10px;
     width: 100%;
- }
- p{
+}
+
+p {
     display: block;
     margin-block-start: 1em;
     margin-block-end: 0em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     unicode-bidi: isolate;
- }
+}
 
 /* 2. Cria um "respiro" no topo para não cobrir o título */
 section {
-    scroll-margin-top: 120px; /* Ajuste esse valor se o seu header for mais alto */
+    scroll-margin-top: 120px;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 60px 20px;
 }
+
 /* 1. RESET E CONFIGURAÇÕES GERAIS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* Container que segura os cultos */
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background-color: #ffffff;
+}
+
+h2 {
+    color: #5d4037;
+    border-left: 6px solid #5d4037;
+    padding-left: 14px;
+    margin-bottom: 10px;
+}
+
+/* Container que segura os cultos / cards em geral */
 .cultos-grid {
     display: flex;
-    justify-content: space-between; /* Espaça eles igualmente */
-    gap: 20px; /* Espaço entre os cards */
-    flex-wrap: wrap; /* Se não couber (no celular), ele joga para baixo */
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
     margin-top: 30px;
 }
 
-/* Estilo de cada "card" de culto */
+/* Estilo de cada "card" */
 .culto-card {
-    flex: 1; /* Faz todos terem a mesma largura */
-    min-width: 250px; /* Não deixa ficarem esmagados no mobile */
+    flex: 1;
+    min-width: 250px;
     padding: 20px;
-    background-color: #f9f5f3; /* Aquele bege clarinho que combina com o marrom */
-    border-top: 4px solid #5d4037; /* Detalhe em marrom no topo */
+    background-color: #f9f5f3;
+    border-top: 4px solid #5d4037;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     text-align: center;
 }
@@ -73,14 +97,27 @@ section {
 .culto-card h3 {
     margin-bottom: 15px;
     color: #5d4037;
-    border-left: none; /* Removemos a borda lateral aqui para centralizar */
+    border-left: none;
     padding-left: 0;
 }
-body {
-    font-family: 'Georgia', serif; /* Fonte clássica e legível */
-    line-height: 1.6;
-    color: #1a1a1a;
-    background-color: #ffffff;
+
+/* Cards clicáveis (eventos, mídia, artigos) */
+a.culto-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+a.culto-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+}
+
+.midia-icone {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
 }
 
 /* 2. CABEÇALHO (HEADER) */
@@ -102,7 +139,7 @@ body {
 }
 
 .logo img {
-    height: 70px; /* Ajuste conforme o tamanho da sua Logo.png */
+    height: 70px;
     display: block;
 }
 
@@ -110,6 +147,328 @@ body {
 .main-nav ul {
     display: flex;
     list-style: none;
+    flex-wrap: wrap;
+}
+
+.main-nav ul li {
+    margin: 0 4px;
+}
+
+.main-nav ul li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 24px 10px;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active-link {
+    color: #D28D53;
+}
+
+/* Hamburguer (mobile) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburger .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+
+@media (max-width: 900px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .main-nav {
+        display: none;
+        width: 100%;
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+    }
+
+    .header-container {
+        flex-wrap: wrap;
+        padding: 10px 20px;
+    }
+}
+
+/* =========================================
+   VÍDEO DE APRESENTAÇÃO (página inicial)
+   ========================================= */
+.apresentacao {
+    text-align: center;
+}
+
+.video-wrapper {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+.video-apresentacao {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    background: #000;
+}
+
+.apresentacao-texto h1 {
+    color: #1a1a1a;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   BOTÕES
+   ========================================= */
+.btn-primary {
+    display: inline-block;
+    background-color: #5d4037;
+    color: #ffffff;
+    padding: 12px 24px;
+    margin-top: 16px;
+    text-decoration: none;
+    border: none;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #D28D53;
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 13px;
+}
+
+/* =========================================
+   HERO DAS PÁGINAS INTERNAS (imagem inicial)
+   ========================================= */
+.page-hero {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.hero-img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================================
+   VERSÍCULO BÍBLICO
+   ========================================= */
+.verse-box {
+    background-color: #f9f5f3;
+    border-left: 6px solid #5d4037;
+    padding: 20px 24px;
+    font-style: italic;
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.verse-section {
+    text-align: center;
+}
+
+/* =========================================
+   NOSSA VISÃO / LIDERANÇA / MEMBRESIA
+   ========================================= */
+.lideranca-card {
+    text-align: center;
+}
+
+.lideranca-foto {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    border: 4px solid #5d4037;
+}
+
+.passos-membro {
+    margin: 16px 0 0 20px;
+}
+
+.passos-membro li {
+    margin-bottom: 8px;
+}
+
+/* =========================================
+   ANIVERSARIANTES
+   ========================================= */
+.birthday-foto {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    border: 4px solid #D28D53;
+}
+
+/* =========================================
+   CATECISMO
+   ========================================= */
+.catecismo-conteudo h3 {
+    color: #5d4037;
+    margin-top: 24px;
+    margin-bottom: 6px;
+}
+
+.catecismo-conteudo p {
+    margin-bottom: 8px;
+}
+
+/* =========================================
+   LOUVORES (playlist)
+   ========================================= */
+.playlist-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.playlist-embed {
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+}
+
+/* =========================================
+   LOGIN
+   ========================================= */
+.login-box {
+    max-width: 360px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.login-box label {
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-weight: bold;
+    color: #5d4037;
+}
+
+.login-box input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-family: 'Georgia', serif;
+}
+
+/* =========================================
+   RODAPÉ (FOOTER)
+   ========================================= */
+.main-footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 50px 20px 20px 20px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-col h3 {
+    color: #D28D53;
+    margin-bottom: 14px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-nav ul {
+    list-style: none;
+}
+
+.footer-nav ul li {
+    margin-bottom: 8px;
+}
+
+.footer-nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 0.85;
+}
+
+.footer-nav ul li a:hover {
+    color: #D28D53;
+    opacity: 1;
+}
+
+.footer-contact a {
+    color: #ffffff;
+}
+
+.footer-map .map-embed {
+    width: 100%;
+    height: 160px;
+    border: 0;
+    border-radius: 4px;
+}
+
+.social-icons {
+    margin-top: 14px;
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons img {
+    width: 28px;
+    height: 28px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    opacity: 0.7;
+    font-size: 13px;
+}
+
+/* =========================================
+   AVISOS (mantido do original)
+   ========================================= */
+.avisos .cultos-grid .cultos-grid {
+    width: 100%;
 }
 
 .main-nav a {
